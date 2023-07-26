@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
 
   padding: 32px 160px;
 
-  button {
+  nav {
     padding: 8px;
     display: flex;
     align-items: center;
@@ -21,7 +21,9 @@ export const HeaderContainer = styled.header`
 
     background: ${(props) => props.theme['yellow-light']};
 
-    color: ${(props) => props.theme['yellow-dark']};
+    svg {
+      color: ${(props) => props.theme['yellow-dark']};
+    }
   }
 `
 

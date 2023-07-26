@@ -7,6 +7,7 @@ import {
 
 import logo from '../../assets/Logo.svg'
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -21,12 +22,14 @@ export default function Header() {
           Palmas, TO
         </LocationContainer>
         <Counter>3</Counter>
-        <button>
-          <ShoppingCart
-            size={22}
-            weight='fill'
-          />
-        </button>
+        <nav>
+          <NavLink to='/checkout'>
+            <ShoppingCart
+              size={22}
+              weight='fill'
+            />
+          </NavLink>
+        </nav>
       </ActionsContainer>
     </HeaderContainer>
   )
