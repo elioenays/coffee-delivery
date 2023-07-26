@@ -1,6 +1,7 @@
+import { Title } from '../../../../utils/styles/styles'
 import Adress from '../Address'
 import Payment from '../Payment'
-import { OrderDetailsContainer, Title } from './styles'
+import { OrderDetailsContainer } from './styles'
 
 export default function OrderDetails() {
   return (

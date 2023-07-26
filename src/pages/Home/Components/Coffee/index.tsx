@@ -38,19 +38,17 @@ export default function Coffee({
         </Price>
         <Actions>
           <Counter>
-            <button>
-              <Minus
-                size={14}
-                weight='bold'
-              />
-            </button>
+            <Minus
+              size={14}
+              weight='bold'
+            />
+
             <Quantity>1</Quantity>
-            <button>
-              <Plus
-                size={14}
-                weight='bold'
-              />
-            </button>
+
+            <Plus
+              size={14}
+              weight='bold'
+            />
           </Counter>
           <Shop>
             <ShoppingCart

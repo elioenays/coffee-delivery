@@ -133,9 +133,7 @@ export const Counter = styled.div`
 
   border-radius: 6px;
 
-  button {
+  svg {
     color: ${(props) => props.theme['purple']};
-    background: none;
-    border: none;
   }
 `

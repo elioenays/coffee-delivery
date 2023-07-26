@@ -67,14 +67,24 @@ export const NumberAndComplement = styled.div`
   display: flex;
   gap: 12px;
 
-  input {
-    width: 50%;
+  :nth-child(1) {
+    width: 35.71%;
+  }
+  :nth-child(2) {
+    width: 62.14%;
   }
 `
 
 export const CityInfo = styled.div`
   display: flex;
   gap: 12px;
+
+  :nth-child(1) {
+    width: 35.71%;
+  }
+  :nth-child(2) {
+    width: 49.29%;
+  }
 `
 
 export const UF = styled.input`
