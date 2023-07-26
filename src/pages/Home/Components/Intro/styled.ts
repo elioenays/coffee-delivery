@@ -7,10 +7,7 @@ export const IntroContainer = styled.div`
   gap: 56px;
   padding: 94px 160px;
 
-  background-image: url(${BackgroundImage});
-  background-clip: padding-box;
-  background-position: center;
-  background-size: cover;
+  background: url(${BackgroundImage});
 `
 
 export const Content = styled.div`

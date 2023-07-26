@@ -1,11 +1,11 @@
 import { styled } from 'styled-components'
 
 export const CoffeeListContainer = styled.div`
-  padding: 32px 160px;
+  padding: 2rem 10rem;
 
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 3.25rem;
 
   flex-wrap: wrap;
 
@@ -22,7 +22,7 @@ export const List = styled.div`
   display: flex;
   flex-direction: row;
   align-items: start;
-  gap: 32px;
+  gap: 2rem;
 
   max-width: 70rem;
   flex-wrap: wrap;
