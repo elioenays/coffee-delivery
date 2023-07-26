@@ -9,21 +9,32 @@ import {
   Real,
   Shop,
   Tag,
+  TagContainer,
   Title,
 } from './style'
 
-import Expresso from '../../../../assets/Expresso.svg'
+import { CoffeeProps } from '../../../../utils/coffee/coffees'
 
-export default function Coffee() {
+export default function Coffee({
+  description,
+  imageUrl,
+  name,
+  price,
+  tags,
+}: CoffeeProps) {
   return (
     <CoofeeContainer>
-      <img src={Expresso} />
-      <Tag>TRADICIONAL</Tag>
-      <Title>Expresso Tradicional</Title>
-      <p>O tradicional café feito com água quente e grãos moídos</p>
+      <img src={imageUrl} />
+      <TagContainer>
+        {tags.map((tag) => {
+          return <Tag>{tag}</Tag>
+        })}
+      </TagContainer>
+      <Title>{name}</Title>
+      <p>{description}</p>
       <Buy>
         <Price>
-          <Real>R$</Real> 9.90
+          <Real>R$</Real> {price}
         </Price>
         <Actions>
           <Counter>

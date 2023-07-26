@@ -7,6 +7,8 @@ export const CoffeeListContainer = styled.div`
   flex-direction: column;
   gap: 52px;
 
+  flex-wrap: wrap;
+
   h2 {
     font-family: 'Baloo 2';
     color: ${(props) => props.theme['base-subtitle']};
@@ -21,4 +23,7 @@ export const List = styled.div`
   flex-direction: row;
   align-items: start;
   gap: 32px;
+
+  max-width: 70rem;
+  flex-wrap: wrap;
 `

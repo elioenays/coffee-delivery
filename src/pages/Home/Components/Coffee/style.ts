@@ -51,9 +51,19 @@ export const Tag = styled.label`
   font-size: 0.625rem;
   font-weight: bold;
   line-height: 130%;
+`
+
+export const TagContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 
   margin-top: 12px;
   margin-bottom: 16px;
+
+  padding: 4px 8px;
 `
 
 export const Buy = styled.div`
