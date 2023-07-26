@@ -24,3 +24,18 @@ export const OrderItensBox = styled.div`
     border: none;
   }
 `
+
+export const ConfirmOrder = styled.button`
+  color: ${(props) => props.theme['white']};
+
+  background: ${(props) => props.theme['yellow']};
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 12px 8px;
+
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 160%;
+`

@@ -1,6 +1,7 @@
 import { Title } from '../../../../utils/styles/styles'
 import CoffeeCard from '../CoffeeCard'
-import { OrderItensContainer, OrderItensBox } from './styles'
+import TotalItens from '../TotalItens'
+import { OrderItensContainer, OrderItensBox, ConfirmOrder } from './styles'
 
 export default function OrderItens() {
   return (
@@ -12,6 +13,8 @@ export default function OrderItens() {
         <hr />
         <CoffeeCard />
         <hr />
+        <TotalItens />
+        <ConfirmOrder>CONFIRMAR PEDIDO</ConfirmOrder>
       </OrderItensBox>
     </OrderItensContainer>
   )
