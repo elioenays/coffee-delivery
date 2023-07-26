@@ -13,6 +13,9 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: center;
 
+    width: 38px;
+    height: 38px;
+
     border: none;
     border-radius: 6px;
 
@@ -35,6 +38,8 @@ export const LocationContainer = styled.span`
   align-items: center;
   justify-content: center;
   gap: 4px;
+
+  height: 38px;
 
   background: ${(props) => props.theme['purple-light']};
 
