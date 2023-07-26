@@ -50,3 +50,24 @@ export const LocationContainer = styled.span`
   font-size: 0.875rem;
   line-height: 1.3;
 `
+
+export const Counter = styled.span`
+  background: ${(props) => props.theme['yellow-dark']};
+  color: ${(props) => props.theme['white']};
+
+  font-weight: bold;
+  letter-spacing: -6%;
+  font-size: 0.75rem;
+
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+
+  position: relative;
+  bottom: 16px;
+  left: 60px;
+`

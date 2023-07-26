@@ -1,4 +1,9 @@
-import { ActionsContainer, HeaderContainer, LocationContainer } from './styles'
+import {
+  ActionsContainer,
+  Counter,
+  HeaderContainer,
+  LocationContainer,
+} from './styles'
 
 import logo from '../../assets/Logo.svg'
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
@@ -15,6 +20,7 @@ export default function Header() {
           />
           Palmas, TO
         </LocationContainer>
+        <Counter>3</Counter>
         <button>
           <ShoppingCart
             size={22}
