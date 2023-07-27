@@ -135,5 +135,8 @@ export const Counter = styled.div`
 
   svg {
     color: ${(props) => props.theme['purple']};
+    &:hover {
+      color: ${(props) => props.theme['purple-dark']};
+    }
   }
 `

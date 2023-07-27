@@ -60,6 +60,10 @@ export const PaymentOptions = styled.div`
 
     border: none;
     border-radius: 6px;
+
+    &:hover {
+      background: ${(props) => props.theme['base-hover']};
+    }
   }
 
   span {
