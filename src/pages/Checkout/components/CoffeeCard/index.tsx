@@ -9,15 +9,20 @@ import {
   Remove,
 } from './styles'
 
-import Expresso from '../../../../utils/coffee/assets/Expresso.svg'
+interface CoffeeCardProps {
+  id?: number
+  name: string
+  imageUrl: string
+  price: string
+}
 
-export default function CoffeeCard() {
+export default function CoffeeCard({ imageUrl, name, price }: CoffeeCardProps) {
   return (
     <CoffeeCardContainer>
       <Info>
-        <img src={Expresso} />
+        <img src={imageUrl} />
         <Details>
-          <span>Expresso Tradicional</span>
+          <span>{name}</span>
           <Actions>
             <Counter>
               <Minus
@@ -40,7 +45,7 @@ export default function CoffeeCard() {
           </Actions>
         </Details>
       </Info>
-      <ItemPrice>R$ 9,90</ItemPrice>
+      <ItemPrice>R$ {price}</ItemPrice>
     </CoffeeCardContainer>
   )
 }

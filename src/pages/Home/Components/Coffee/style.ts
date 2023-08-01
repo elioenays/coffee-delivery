@@ -42,7 +42,7 @@ export const Title = styled.span`
   margin-bottom: 8px;
 `
 
-export const Tag = styled.label`
+export const TagBox = styled.label`
   background: ${(props) => props.theme['yellow-light']};
   padding: 4px 8px;
   border-radius: 50px;
@@ -90,14 +90,23 @@ export const Shop = styled.button`
   align-items: center;
   justify-content: center;
 
-  background: ${(props) => props.theme['purple-dark']};
-
   border-radius: 6px;
   border: none;
-  color: white;
+
+  cursor: pointer;
 
   width: 38px;
   height: 38px;
+
+  background: ${(props) => props.theme['purple-dark']};
+
+  &:hover {
+    background: ${(props) => props.theme['purple']};
+  }
+
+  svg {
+    color: ${(props) => props.theme['white']};
+  }
 `
 
 export const Real = styled.span`
@@ -134,6 +143,7 @@ export const Counter = styled.div`
   border-radius: 6px;
 
   svg {
+    cursor: pointer;
     color: ${(props) => props.theme['purple']};
     &:hover {
       color: ${(props) => props.theme['purple-dark']};

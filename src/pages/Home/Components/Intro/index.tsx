@@ -25,7 +25,7 @@ export default function Intro() {
         <Items>
           <ItemContainer>
             <Item>
-              <IconItem itemColor='yellowDark'>
+              <IconItem itemcolor='yellowDark'>
                 <ShoppingCart
                   weight='fill'
                   size={16}
@@ -34,7 +34,7 @@ export default function Intro() {
               <span>Compra simples e segura</span>
             </Item>
             <Item>
-              <IconItem itemColor='yellow'>
+              <IconItem itemcolor='yellow'>
                 <Timer
                   weight='fill'
                   size={16}
@@ -46,7 +46,7 @@ export default function Intro() {
           </ItemContainer>
           <ItemContainer>
             <Item>
-              <IconItem itemColor='baseText'>
+              <IconItem itemcolor='baseText'>
                 <Package
                   weight='fill'
                   size={16}
@@ -55,7 +55,7 @@ export default function Intro() {
               <span>Embalagem mantém o café intacto</span>
             </Item>
             <Item>
-              <IconItem itemColor='purple'>
+              <IconItem itemcolor='purple'>
                 <Coffee
                   weight='fill'
                   size={16}

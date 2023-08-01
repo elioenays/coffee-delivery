@@ -62,7 +62,7 @@ const ITEM_COLORS = {
 } as const
 
 interface ItemProps {
-  itemColor: keyof typeof ITEM_COLORS
+  itemcolor: keyof typeof ITEM_COLORS
 }
 
 export const IconItem = styled.div<ItemProps>`
@@ -74,7 +74,7 @@ export const IconItem = styled.div<ItemProps>`
   width: 32px;
   height: 32px;
 
-  background: ${(props) => props.theme[ITEM_COLORS[props.itemColor]]};
+  background: ${(props) => props.theme[ITEM_COLORS[props.itemcolor]]};
 `
 
 export const ItemContainer = styled.div`

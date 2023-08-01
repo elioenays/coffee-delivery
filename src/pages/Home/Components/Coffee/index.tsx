@@ -8,12 +8,21 @@ import {
   Quantity,
   Real,
   Shop,
-  Tag,
+  TagBox,
   TagContainer,
   Title,
 } from './style'
+import { Tag } from '../../../../utils/coffee/coffees'
 
-import { CoffeeProps } from '../../../../utils/coffee/coffees'
+export interface CoffeeProps {
+  id?: number
+  name: string
+  tags: Tag[]
+  imageUrl: string
+  description: string
+  price: string
+  handleAddItenToCart: () => void
+}
 
 export default function Coffee({
   description,
@@ -21,13 +30,14 @@ export default function Coffee({
   name,
   price,
   tags,
+  handleAddItenToCart,
 }: CoffeeProps) {
   return (
     <CoofeeContainer>
       <img src={imageUrl} />
       <TagContainer>
         {tags.map((tag) => {
-          return <Tag>{tag}</Tag>
+          return <TagBox key={tag}>{tag}</TagBox>
         })}
       </TagContainer>
       <Title>{name}</Title>
@@ -54,6 +64,7 @@ export default function Coffee({
             <ShoppingCart
               weight='fill'
               size={22}
+              onClick={handleAddItenToCart}
             />
           </Shop>
         </Actions>

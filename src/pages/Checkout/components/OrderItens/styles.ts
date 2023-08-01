@@ -12,6 +12,8 @@ export const OrderItensBox = styled.div`
 
   background: ${(props) => props.theme['base-card']};
 
+  min-width: 28rem;
+
   border-radius: 6px 44px 6px 44px;
 
   padding: 40px 40px;
