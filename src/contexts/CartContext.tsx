@@ -3,6 +3,9 @@ import { CoffeeProps } from '../utils/coffee/coffees'
 
 interface CartContextType {
   addItensInCart: (coffee: CoffeeProps) => void
+  removeItemFromCart: (id: number) => void
+  increaseQuantity: (id: number) => void
+  decreaseQuantity: (id: number) => void
   itensInCart: CoffeeProps[]
 }
 
@@ -18,11 +21,52 @@ export default function CartContextProvider({
   const [itensInCart, setItemsInCart] = useState<CoffeeProps[]>([])
 
   function addItensInCart(coffee: CoffeeProps) {
-    setItemsInCart((state) => [...state, coffee])
+    setItemsInCart((state) => [coffee, ...state])
+  }
+
+  function removeItemFromCart(id: number) {
+    const itemIndex = itensInCart.findIndex((item) => item.id === id)
+
+    itensInCart.splice(itemIndex, 1)
+
+    setItemsInCart((state) => [...state])
+  }
+
+  function increaseQuantity(id: number) {
+    const coffee = itensInCart.map((item) => {
+      if (item.id === id) {
+        // const newQuantity = 0
+        return { ...item, quantity: (item.quantity += 1) }
+      }
+
+      return item
+    })
+
+    setItemsInCart(coffee)
+  }
+
+  function decreaseQuantity(id: number) {
+    const coffee = itensInCart.map((item) => {
+      if (item.id === id) {
+        return { ...item, quantity: (item.quantity -= 1) }
+      }
+
+      return item
+    })
+
+    setItemsInCart(coffee)
   }
 
   return (
-    <CartContext.Provider value={{ itensInCart, addItensInCart }}>
+    <CartContext.Provider
+      value={{
+        itensInCart,
+        addItensInCart,
+        removeItemFromCart,
+        decreaseQuantity,
+        increaseQuantity,
+      }}
+    >
       {children}
     </CartContext.Provider>
   )

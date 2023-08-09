@@ -27,6 +27,13 @@ export const OrderItensBox = styled.div`
   }
 `
 
+export const CofeeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+`
+
 export const ConfirmOrder = styled.button`
   color: ${(props) => props.theme['white']};
 

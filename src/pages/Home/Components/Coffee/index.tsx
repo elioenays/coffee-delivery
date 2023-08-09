@@ -20,7 +20,8 @@ export interface CoffeeProps {
   tags: Tag[]
   imageUrl: string
   description: string
-  price: string
+  price: number
+  quantity: number
   handleAddItenToCart: () => void
 }
 
@@ -30,6 +31,7 @@ export default function Coffee({
   name,
   price,
   tags,
+  quantity,
   handleAddItenToCart,
 }: CoffeeProps) {
   return (
@@ -53,7 +55,7 @@ export default function Coffee({
               weight='bold'
             />
 
-            <Quantity>1</Quantity>
+            <Quantity>{quantity}</Quantity>
 
             <Plus
               size={14}

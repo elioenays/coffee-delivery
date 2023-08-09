@@ -2,7 +2,12 @@ import { useContext } from 'react'
 import { Title } from '../../../../utils/styles/styles'
 import CoffeeCard from '../CoffeeCard'
 import TotalItens from '../TotalItens'
-import { OrderItensContainer, OrderItensBox, ConfirmOrder } from './styles'
+import {
+  OrderItensContainer,
+  OrderItensBox,
+  ConfirmOrder,
+  CofeeContainer,
+} from './styles'
 import { CartContext } from '../../../../contexts/CartContext'
 
 export default function OrderItens() {
@@ -14,15 +19,16 @@ export default function OrderItens() {
 
       <OrderItensBox>
         {itensInCart.map((item) => (
-          <>
+          <CofeeContainer key={item.id.toString()}>
             <CoffeeCard
-              key={item.id}
+              id={item.id}
               imageUrl={item.imageUrl}
               name={item.name}
               price={item.price}
+              quantity={item.quantity}
             />
             <hr />
-          </>
+          </CofeeContainer>
         ))}
 
         <TotalItens />

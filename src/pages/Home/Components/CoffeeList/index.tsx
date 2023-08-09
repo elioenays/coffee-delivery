@@ -27,6 +27,7 @@ export default function CoffeeList() {
               handleAddItenToCart={() => {
                 handleAddItensInCart(coffee)
               }}
+              quantity={1}
             />
           )
         })}

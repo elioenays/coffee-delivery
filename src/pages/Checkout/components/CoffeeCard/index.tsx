@@ -8,15 +8,39 @@ import {
   ItemPrice,
   Remove,
 } from './styles'
+import { CartContext } from '../../../../contexts/CartContext'
+import { useContext } from 'react'
 
 interface CoffeeCardProps {
-  id?: number
+  id: number
   name: string
   imageUrl: string
-  price: string
+  price: number
+  quantity: number
 }
 
-export default function CoffeeCard({ imageUrl, name, price }: CoffeeCardProps) {
+export default function CoffeeCard({
+  imageUrl,
+  name,
+  price,
+  id,
+  quantity,
+}: CoffeeCardProps) {
+  const { removeItemFromCart, decreaseQuantity, increaseQuantity } =
+    useContext(CartContext)
+
+  function handleRemoveItemFromCart() {
+    removeItemFromCart(id)
+  }
+
+  function handleIncreaseQuantity() {
+    increaseQuantity(id)
+  }
+
+  function handleDecreaseQuantity() {
+    decreaseQuantity(id)
+  }
+
   return (
     <CoffeeCardContainer>
       <Info>
@@ -26,16 +50,18 @@ export default function CoffeeCard({ imageUrl, name, price }: CoffeeCardProps) {
           <Actions>
             <Counter>
               <Minus
+                onClick={handleDecreaseQuantity}
                 size={14}
                 weight='bold'
               />
-              <span>1</span>
+              <span>{quantity}</span>
               <Plus
+                onClick={handleIncreaseQuantity}
                 size={14}
                 weight='bold'
               />
             </Counter>
-            <Remove>
+            <Remove onClick={handleRemoveItemFromCart}>
               <Trash
                 size={16}
                 weight='bold'

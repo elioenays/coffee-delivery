@@ -50,6 +50,7 @@ export const Counter = styled.div`
 
   svg {
     color: ${(props) => props.theme['purple']};
+    cursor: pointer;
 
     &:hover {
       color: ${(props) => props.theme['purple-dark']};
@@ -70,13 +71,14 @@ export const Remove = styled.button`
   gap: 4px;
 
   background: ${(props) => props.theme['base-button']};
-
-  border-radius: 6px;
   color: ${(props) => props.theme['purple']};
 
+  border-radius: 6px;
   border: none;
 
   padding: 0 8px;
+
+  cursor: pointer;
 
   span {
     color: ${(props) => props.theme['base-text']};
