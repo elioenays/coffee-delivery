@@ -57,6 +57,7 @@ export const PaymentOptions = styled.div`
     justify-content: left;
     gap: 12px;
     padding: 16px;
+    cursor: pointer;
 
     border: none;
     border-radius: 6px;

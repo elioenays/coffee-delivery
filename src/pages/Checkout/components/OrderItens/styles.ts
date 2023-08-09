@@ -48,6 +48,8 @@ export const ConfirmOrder = styled.button`
   font-size: 0.875rem;
   line-height: 160%;
 
+  cursor: pointer;
+
   &:hover {
     background: ${(props) => props.theme['yellow-dark']};
   }
