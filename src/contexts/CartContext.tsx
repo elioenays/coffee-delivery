@@ -21,7 +21,15 @@ export default function CartContextProvider({
   const [itensInCart, setItemsInCart] = useState<CoffeeProps[]>([])
 
   function addItensInCart(coffee: CoffeeProps) {
-    setItemsInCart((state) => [coffee, ...state])
+    const coffeeAlreadyInCart = itensInCart.find(
+      (item) => item.id === coffee.id,
+    )
+
+    if (coffeeAlreadyInCart) {
+      return increaseQuantity(coffee.id)
+    }
+
+    return setItemsInCart((state) => [coffee, ...state])
   }
 
   function removeItemFromCart(id: number) {
@@ -35,7 +43,6 @@ export default function CartContextProvider({
   function increaseQuantity(id: number) {
     const coffee = itensInCart.map((item) => {
       if (item.id === id) {
-        // const newQuantity = 0
         return { ...item, quantity: (item.quantity += 1) }
       }
 
